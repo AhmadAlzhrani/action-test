@@ -1,3 +1,0 @@
-mkdi
-ls-a
-ls
