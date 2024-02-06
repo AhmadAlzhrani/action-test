@@ -23,7 +23,7 @@ jobs:
         run: sudo apt-get update
 
       - name: install write-good
-      - run: npm install write-good
+        run: npm install write-good
 
       - name: Run ShellCheck
         run: |
