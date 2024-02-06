@@ -1,0 +1,3 @@
+mkdi
+ls-a
+ls
