@@ -1,0 +1,35 @@
+name: writeGood
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  writeGood:
+    name: writeGood
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: update ubuntu
+        run: sudo apt-get update
+
+      - name: install write-good
+      - run: npm install write-good
+
+      - name: Run ShellCheck
+        run: |
+          writeGood_output=$(npx write-good *.sh)
+          echo "$writeGood_output"
+          if [ -n "$writeGood_output" ]; then
+            echo "write-good found errors."
+            exit 1
+          fi
