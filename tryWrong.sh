@@ -1,2 +1,2 @@
-ls -a
+s -a
 mkdir action1
