@@ -25,9 +25,9 @@ jobs:
       - name: install write-good
         run: npm install write-good
 
-      - name: Run ShellCheck
+      - name: Run write-good
         run: |
-          writeGood_output=$(npx write-good *.sh)
+          writeGood_output=$(npx write-good *.md)
           echo "$writeGood_output"
           if [ -n "$writeGood_output" ]; then
             echo "write-good found errors."
