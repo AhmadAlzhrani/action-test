@@ -1,0 +1,9 @@
+name: Write-Good Checker
+description: Checks README.md files using write-good
+author: Your Name
+inputs: {}
+outputs: {}
+runs:
+  using: 'node20'
+  main: 'wg2.js'
+
