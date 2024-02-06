@@ -26,10 +26,4 @@ jobs:
         run: npm install write-good
 
       - name: Run write-good
-        run: |
-          writeGood_output=$(npx write-good *.md)
-          echo "$writeGood_output"
-          if [ -n "$writeGood_output" ]; then
-            echo "write-good found errors."
-            exit 1
-          fi
+        run: npx write-good *.md
